@@ -17,17 +17,20 @@
      include "./navbar.php" ;
     ?>
     <div class="container">
-        <div class="row">
-            <h1> เข้าสู่ระบบ </h1>
-            <form action="check.php" method="POST">
-                Username:
-                <input type="text" name="username" class="form-control" placeholder="กรอกรหัสผู้ใช้" />
-                Password:
-                <input type="password" name="password" class="form-control" placeholder="กรอกรหัสผู้ใช้" />
-                <input type="submit" name="Login" class="btn btn-primary" />
-            </form>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1> เข้าสู่ระบบ </h1>
+                <form action="check.php" method="POST">
+                    Username:
+                    <input type="text" name="username" class="form-control" placeholder="กรอกรหัสผู้ใช้" />
+                    Password:
+                    <input type="password" name="password" class="form-control" placeholder="กรอกรหัสผู้ใช้" />
+                    <div class="pt-2 d-grid">
+                        <input type="submit" name="Login" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
 
 </body>
 
