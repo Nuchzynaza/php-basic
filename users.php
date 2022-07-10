@@ -1,4 +1,5 @@
 <?php
+    include "navbar.php";
     include "config.php";
 
     $sql="SELECT * from users";
@@ -8,9 +9,11 @@
         while($row = mysqli_fetch_assoc($result)){
             echo "$row[username] $row[email] <br/>";
         }
-    }else
-        echo "ไม่พบข้อมูล"
+        
+    }else{
+        echo "ไม่พบข้อมูล";
+    }
 
     mysqli_close();
-    
+
 ?>

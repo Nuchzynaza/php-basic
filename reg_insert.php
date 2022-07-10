@@ -7,17 +7,20 @@
     $address= $_POST['address'];
     $email= $_POST['email'];
 
-    if(！empty($username) && ！empty($password) && ！empty($email)){
-       
-    $sql = "INSERT INTO users(username, password, firstname, lastname, address, email)
-        VALUES('$username', '$password', '$firstname', '$lastname', '$address', '$email')";
+    if(!empty($username) && !empty($password) && !empty($email)){
+        $sql = "INSERT INTO users(username, password, firstname, lastname, address, email)
+            VALUES('$username', '$password', '$firstname', '$lastname', '$address', '$email')";
 
-    if(mysqli_query($link, $sql)){
+        if(mysqli_query($link, $sql)){
+            echo "บันทึกข้อมูลเรียบร้อย";
+            header ("location: user.php");
+        }else{
+            echo "ไม่สามารถบันทึกข้อมูลได้";
+        }
 
-        echo "บันทึกข้อมูลเรียบร้อย";
     }else{
-
-        echo "ไม่สามารถบันทึกข้อมูลได้";
+        echo "ไม่พบข้อมูล";
     }
+
     mysqli_close();
 ?>
